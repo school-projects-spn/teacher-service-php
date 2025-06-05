@@ -22,7 +22,7 @@ function verifyToken() {
 
     $token = str_replace('Bearer ', '', $headers['Authorization']);
     try {
-        $decoded = JWT::decode($token, new Key('your_super_secret_jwt_key_here_change_this_in_production', 'HS256'));
+        $decoded = JWT::decode($token, new Key('3N4In35mLc3U/0xgTjahEdcPbvbfuQg/NCEX7tSZu7P6MTs6VbMqPc7hxEvL59Mq', 'HS256'));
         return $decoded;
     } catch (Exception $e) {
         http_response_code(401);
